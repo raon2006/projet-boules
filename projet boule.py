@@ -53,8 +53,9 @@ class balle:
         elif self.y > 470:
             self.dy *= (-1)
 
-balle1 =balle(56,75,2,5)
-liste = [balle1]
+balle1 =balle(random(20,600),75,2,5)
+balle2 =balle(146,134,2,5)
+liste = [balle1,balle2]
 
 
 def collision(n):
@@ -83,9 +84,10 @@ while True :
     y3 += dy3
 
     for b in liste:
+        pygame.draw.circle(fenetre,couleur,(x,y),10)
         b.draw()
         b.move()
-
+        b.paroi()
     if x < 10:
         dx *= (-1)
     elif x > 630:
