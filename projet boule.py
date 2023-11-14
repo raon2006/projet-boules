@@ -72,7 +72,6 @@ while True :
     fenetre.fill([0,0,0])
     pygame.draw.circle(fenetre,couleur,(x,y),10)
     pygame.draw.circle(fenetre,couleur3,(x2,y2),5) #normalement ici c'est couleur2 et pas couleur3
-    pygame.draw.circle(fenetre,couleur4,(x3,y3),15)
     balle1.draw()
     balle1.move()
     balle1.paroi()
@@ -96,15 +95,6 @@ while True :
     elif y > 470:
         dy *= (-1)
 
-
-    if x3 < 10:
-        dx3 *= (-1)
-    elif x3 > 630:
-        dx3 *= (-1)
-    elif y3 < 10:
-        dy3 *= (-1)
-    elif y3 > 470:
-        dy3 *= (-1)
 
     if x2 < 10:
         dx2 *= (-1)
